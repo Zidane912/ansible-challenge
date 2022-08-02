@@ -3,7 +3,6 @@
     name: "{{ item }}"
     state: present
     update_cache: true
-  with_items: "{{ packages }}"
 
 - name: Confirm services are running
   service:

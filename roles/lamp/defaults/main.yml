@@ -1,4 +1,5 @@
 packages:
+  - apache
   - mysql-server
   - mysql-common
   - mysql-client
