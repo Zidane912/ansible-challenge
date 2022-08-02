@@ -1,8 +1,9 @@
 - name: Install our packages
   apt:
-    name: "{{ item }}"
+    name: "{{ packages }}"
     state: present
     update_cache: true
+
 
 - name: Confirm services are running
   service:

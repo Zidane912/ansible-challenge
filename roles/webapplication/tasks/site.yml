@@ -2,6 +2,6 @@
 
 - name: Copy the apache configuration file
   template:
-    src: "apache.conf"
+    src: apache.conf
     dest: /etc/apache2/sites-available/000-default.conf
   notify: "Restart Apache"
