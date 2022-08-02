@@ -1,0 +1,19 @@
+- name: Install our packages
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: true
+  with_items: "{{ packages }}"
+
+- name: Confirm services are running
+  service:
+    name: "{{ item }}"
+    state: started
+  with_items: "{{ services }}"
+
+- name: Enable Apache2 modssl
+  shell: a2enmod ssl
+
+- name: Enable Apache2 Default HTTPS site
+  shell: a2ensite default-ssl
+  notify: Restart Apache
