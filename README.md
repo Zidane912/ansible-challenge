@@ -6,7 +6,7 @@
 
 2. roles/lamp/tasks/main.yml
 
-3. roles/webapplication/defaults/main.yml
+3. roles/webapplication/defaults/main.yml (shouldn't need to change this one but the tutorial I used had it like this)
 
 4. roles/webapplication/tasks/site.yml
 
